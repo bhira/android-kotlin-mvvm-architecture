@@ -35,7 +35,7 @@ object WebServiceClient {
 
             if (retrofit == null) {
                 retrofit = Retrofit.Builder()
-                        .baseUrl("http://www.example.com/")
+                        .baseUrl("https://apidev.big-agent.xyz/v1/")
                         .addConverterFactory(GsonConverterFactory.create())
                         .client(okHttpClient)
                         .build()

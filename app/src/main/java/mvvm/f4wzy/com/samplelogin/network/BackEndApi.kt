@@ -8,7 +8,7 @@ import retrofit2.http.POST
 
 interface BackEndApi {
     @FormUrlEncoded
-    @POST("auth/login")
+    @POST("login")
     fun LOGIN(@Field("email") email: String, @Field("password") password: String): Call<User>
 
 
