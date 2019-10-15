@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
         })
 
         viewmodel?.userLogin?.observe(this, Observer { user ->
-            Toast.makeText(this, "welcome, ${user?.last_name}", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "welcome", Toast.LENGTH_LONG).show()
         })
     }
 

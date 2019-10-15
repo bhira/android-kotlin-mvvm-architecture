@@ -1,4 +1,4 @@
 package mvvm.f4wzy.com.samplelogin.model
 
-data class User(val first_name: String, val last_name: String, val personal_image: String) {
+data class User(val code: String, val data: List<Any>, val message: String, val status: String) {
 }

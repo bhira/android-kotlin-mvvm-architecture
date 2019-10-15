@@ -5,6 +5,7 @@ import android.arch.lifecycle.AndroidViewModel
 import android.arch.lifecycle.MutableLiveData
 import android.databinding.ObservableBoolean
 import android.databinding.ObservableField
+import android.util.Log
 import mvvm.f4wzy.com.samplelogin.model.User
 import mvvm.f4wzy.com.samplelogin.network.BackEndApi
 import mvvm.f4wzy.com.samplelogin.network.WebServiceClient
@@ -52,6 +53,7 @@ class LoginViewModel(application: Application) : AndroidViewModel(application), 
     }
 
     override fun onResponse(call: Call<User>?, response: Response<User>?) {
+        Log.d("RESP", "${response!!.code()}")
         progressDialog?.value = false
         userLogin?.value = response?.body()
 
